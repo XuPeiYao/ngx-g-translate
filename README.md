@@ -1,27 +1,37 @@
 # NgxGTranslate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+For Angular 7.x+, Google translate button wrapper package.
 
-## Development server
+## Get Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Import Module
+```typescript
+import { GTranslateModule } from 'ngx-g-translate';
 
-## Code scaffolding
+@NgModule({
+  declarations: [
+    // ...something...
+  ],
+  imports: [
+    // ...something...,
+    GTranslateModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Use Component
+```html
+...something...
+<g-translate 
+  pageLanguage="en" // This page language
+  [includedLanguages]="['en','ja','zh-CN','zh-TW']" // Can use languages
+>
+</g-translate>
+...something...
+```
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Demo
+![Imgur](https://i.imgur.com/GjcXo0U.png)
